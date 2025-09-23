@@ -1,13 +1,15 @@
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 import WhiteKey from "@/components/whiteKey";
 
 
 export default function Index() {
   return (
+    <View style={styles.mainview}
+    >
+      
     <View
       style={styles.container} // execute code, you need to put it in brackets
-  
     >
     <WhiteKey/>
     <WhiteKey/>
@@ -18,17 +20,27 @@ export default function Index() {
     <WhiteKey/>
     
     </View>
+    <Text style={styles.text}> I'll be a piano one day!</Text>
+    </View>
   );
 }
 
   const styles = StyleSheet.create({
     container: {
     flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  mainview: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "blue"
+    backgroundColor:"rgba(117, 83, 69, 1)"
+  },
+  
+  text: {
+    fontSize: 20,
+    color: "white"
   }
-  });
-
-
+});
