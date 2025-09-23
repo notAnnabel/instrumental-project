@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
 
 
-export default function whiteKey() {
+export default function WhiteKey() {
   return (
     <View
       style={styles.blackKey} // execute code, you need to put it in brackets

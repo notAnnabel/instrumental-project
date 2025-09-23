@@ -1,4 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import WhiteKey from "@/components/whiteKey";
 
 
 export default function Index() {
@@ -7,7 +9,7 @@ export default function Index() {
       style={styles.container} // execute code, you need to put it in brackets
   
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <WhiteKey/>
     </View>
   );
 }
