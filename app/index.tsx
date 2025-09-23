@@ -10,12 +10,20 @@ export default function Index() {
   
     >
     <WhiteKey/>
+    <WhiteKey/>
+    <WhiteKey/>
+    <WhiteKey/>
+    <WhiteKey/>
+    <WhiteKey/>
+    <WhiteKey/>
+    
     </View>
   );
 }
 
   const styles = StyleSheet.create({
     container: {
+    flexDirection: "row",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
