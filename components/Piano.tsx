@@ -1,8 +1,7 @@
-import { Orientation } from "expo-screen-orientation";
 import { StyleSheet, Text, View } from "react-native";
 
 import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
-import useOrientation from "@/hooks/useOrientation";
+
 
 
 export default function Index() {
@@ -27,10 +26,6 @@ export default function Index() {
     <Text style={styles.text}> I want a refund!!!!!</Text>
     </View>
   );
-  if (screenOrientation===Orientation.LANDSCAPE_LEFT) return output;
-  if (screenOrientation===Orientation.LANDSCAPE_RIGHT) return output;
-  else return <Text> Rotate device to landscape </Text> //text overwrites piano
-  
 }
 
   const styles = StyleSheet.create({
