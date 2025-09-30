@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import WhiteKey from "@/components/whiteKey";
+import WhiteKey from "@/components/WhiteKey";
 
 
 export default function Index() {
