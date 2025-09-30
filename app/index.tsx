@@ -1,34 +1,15 @@
+import Piano from "@/components/Piano";
 import { Orientation } from "expo-screen-orientation";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
-import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
 import useOrientation from "@/hooks/useOrientation";
 
 
 export default function Index() {
   const screenOrientation  = useOrientation(); // hook stored in a variable
-  const output = (
-    <View style={styles.mainview}
-    >
-      
-    <View
-      style={styles.container} // execute code, you need to put it in brackets
-    >
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    
-    </View>
-    <Text style={styles.text}> piano with no black keys and can't be pressed...</Text>
-    <Text style={styles.text}> I want a refund!!!!!</Text>
-    </View>
-  );
-  if (screenOrientation===Orientation.LANDSCAPE_LEFT) return output;
-  if (screenOrientation===Orientation.LANDSCAPE_RIGHT) return output;
+  
+  if (screenOrientation===Orientation.LANDSCAPE_LEFT) return <Piano/>;
+  if (screenOrientation===Orientation.LANDSCAPE_RIGHT) return <Piano/>;
   else return <Text> Rotate device to landscape </Text> //text overwrites piano
   
 }

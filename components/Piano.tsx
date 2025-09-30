@@ -1,12 +1,8 @@
+import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
 import { StyleSheet, Text, View } from "react-native";
 
-import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
-
-
-
-export default function Index() {
-  const screenOrientation  = useOrientation(); // hook stored in a variable
-  const output = (
+export default function Piano() {
+  return (
     <View style={styles.mainview}
     >
       
