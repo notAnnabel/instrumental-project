@@ -21,11 +21,11 @@ export default function Piano() {
         </View>
 
       <View style={styles.blackcontainer}>
-        <BlackKey left={50} />
-        <BlackKey left={-130} />
-        <BlackKey left={-306} />
-        <BlackKey left={-580} />
-        <BlackKey left={-760} />
+        <BlackKey left={50} audio={players.Bb4} />
+        <BlackKey left={-130} audio={players.Ab4} />
+        <BlackKey left={-306} audio={players.Gb4} />
+        <BlackKey left={-580} audio={players.Eb4}/>
+        <BlackKey left={-760} audio={players.Db4}/>
 
       
 
