@@ -33,6 +33,7 @@ export default function Piano() {
       </View>
       {/* <Text style={styles.text}> piano with no black keys and can't be pressed...</Text> */}
       {/* <Text style={styles.text}> I want a refund!!!!!</Text> */}
+      {/* change to vertical if needed*/}
     </View>
   );
 }
