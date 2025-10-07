@@ -1,45 +1,64 @@
 import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
 import { loadAudioPlayers } from "@/helpers/audio";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import BlackKey from "./BlackKey";
 
 export default function Piano() {
-  const players=loadAudioPlayers();
+  const players = loadAudioPlayers(); // audio player notes
   return (
-    <View style={styles.mainview}
-    >
+    <View style={styles.mainview}>
+        <View
+          style={styles.whitecontainer} // execute code, you need to put it in brackets
+        >
+          <WhiteKey audio={players.C4} />
+          <WhiteKey audio={players.D4} />
+          <WhiteKey audio={players.E4} />
+          <WhiteKey audio={players.F4} />
+          <WhiteKey audio={players.G4} />
+          <WhiteKey audio={players.A4} />
+          <WhiteKey audio={players.B4} />
+          {/* <BlackKey left={-585}/> */}
+        </View>
+
+      <View style={styles.blackcontainer}>
+        <BlackKey left={50} />
+        <BlackKey left={-130} />
+        <BlackKey left={-306} />
+        <BlackKey left={-580} />
+        <BlackKey left={-760} />
+
       
-    <View
-      style={styles.container} // execute code, you need to put it in brackets
-    >
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    <WhiteKey/>
-    
-    </View>
-    <Text style={styles.text}> piano with no black keys and can't be pressed...</Text>
-    <Text style={styles.text}> I want a refund!!!!!</Text>
+
+
+      </View>
+      {/* <Text style={styles.text}> piano with no black keys and can't be pressed...</Text> */}
+      {/* <Text style={styles.text}> I want a refund!!!!!</Text> */}
     </View>
   );
 }
 
-  const styles = StyleSheet.create({
-    container: {
+const styles = StyleSheet.create({
+  whitecontainer: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
   },
 
-  mainview: {
-    flex: 1,
+  blackcontainer: {
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor:"rgba(117, 83, 69, 1)"
+    width: 0,
   },
-  
+
+  mainview: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(117, 83, 69, 1)"
+  },
+
   text: {
     fontSize: 20,
     color: "white"
