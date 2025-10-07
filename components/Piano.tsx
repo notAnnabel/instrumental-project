@@ -1,7 +1,9 @@
 import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
+import { loadAudioPlayers } from "@/helpers/audio";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Piano() {
+  const players=loadAudioPlayers();
   return (
     <View style={styles.mainview}
     >
