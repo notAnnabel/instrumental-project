@@ -1,5 +1,6 @@
 import { AudioSource, useAudioPlayer } from 'expo-audio';
 import { Pressable, StyleSheet, View } from "react-native";
+import React, { useState } from "react";
 
 const audioSource = require('../helpers/notes/piano/B4.mp3')
 
@@ -9,11 +10,13 @@ interface WhiteKeyProps{
 
 export default function WhiteKey({audio}: WhiteKeyProps) { // whitekey expected audio object
   const player = useAudioPlayer(audio);
+  const [backgroundColor, setBackgroundColor] = useState("white");
 
   function onPress(){
    console.log("a white key has been pressed");
    player.seekTo(0) // resets time to 0 for audio player
    player.play()
+   setBackgroundColor("lightgrey"); // change color on press
   };
   return (
     <Pressable onPress={onPress}>
@@ -22,14 +25,13 @@ export default function WhiteKey({audio}: WhiteKeyProps) { // whitekey expected 
       >
     </View></Pressable>
   );
-}
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
     whiteKey: {width: 100,
     height: 300,
     borderWidth: 2,
     borderColor: "black",
-    backgroundColor: "white"
-}
+    backgroundColor: backgroundColor}
     
-
-  });
+    }
+  )
+};

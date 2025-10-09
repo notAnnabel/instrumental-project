@@ -1,6 +1,3 @@
-
-
-
 export function loadAudioPlayers(){
     const C4 = require('./notes/piano/C4.mp3'); // starts with C key
     const D4 = require('./notes/piano/D4.mp3'); //
