@@ -3,6 +3,7 @@ import { loadAudioPlayers } from "@/helpers/audio";
 import { StyleSheet, View } from "react-native";
 import BlackKey from "./BlackKey";
 
+
 export default function Piano() {
   const players = loadAudioPlayers(); // audio player notes
   return (
@@ -57,11 +58,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(117, 83, 69, 1)"
+    //backgroundColor: "rgba(117, 83, 69, 1)"
   },
 
   text: {
     fontSize: 20,
     color: "white"
   }
+
+  
 });

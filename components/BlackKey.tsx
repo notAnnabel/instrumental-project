@@ -28,8 +28,9 @@ export default function BlackKey({left, audio}: BlackKeyProps) {
   }
 
   return (
-    <Pressable onPress={onPress}>
-      <View style={loadStyles(left, backgroundColor).blackKey}> 
+    <Pressable onPressIn={onPress} style={loadStyles(left, backgroundColor).blackKey}
+    onPressOut={onPressOut}>
+      <View> 
       </View>
     </Pressable>
   );

@@ -18,8 +18,13 @@ export default function WhiteKey({audio}: WhiteKeyProps) { // whitekey expected 
    player.play()
    setBackgroundColor("lightgrey"); // change color on press
   };
+
+  function onPressOut(){
+    setBackgroundColor("white"); // revert color on release
+  }
+
   return (
-    <Pressable onPress={onPress}>
+    <Pressable onPressIn={onPress} onPressOut={onPressOut}>
       <View
       style={loadStyles(backgroundColor).whiteKey} 
       >
