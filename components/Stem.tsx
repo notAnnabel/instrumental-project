@@ -1,45 +1,69 @@
 import Slider from '@react-native-community/slider';
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { AudioContext } from 'react-native-audio-api';
+import { AudioContext, OscillatorNode } from 'react-native-audio-api';
 
 export default function Stem() {
 
-    const ctx = new AudioContext();
-    const oscillator = ctx.createOscillator();
-    const gain = ctx.createGain(); // create the volume
+    let ctx = new AudioContext();
+    const [oscillator, setOscillator]= useState<OscillatorNode>(ctx.createOscillator());
+    //const [volume, setVolume]= useState(ctx.createGain()); 
 
-    oscillator.type = 'triangle'; // sine wave - other options: square, sawtooth, triangle
-
-
-    oscillator.frequency.value = 2000;
-    oscillator.detune.value = 0; // detuner
-    gain.gain.value = 0.50; // volume
-
-    gain.connect(ctx.destination);
-    //oscillator.start()
+    
 
     function onValueChange(Value: number) {
         oscillator.frequency.value = Value;
         console.log(Value);
     }
 
-    function onSlidingStart(Value: number){
-        //oscillator.start()
-        new AudioContext();
-        oscillator.frequency.value = Value;
+    function onSlidingStart(){
+        console.log("sliding")
+
+        const newOscillator = ctx.createOscillator();
+        
+        newOscillator.type = 'triangle'; // sine wave - other options: square, sawtooth, triangle
+        
+        newOscillator.frequency.value = 450;
+        newOscillator.detune.value = 0; // detuner
+        
+        const volume = ctx.createGain();
+        
+        
+        volume.gain.value = 0.30; // volume
+        
+        newOscillator.connect(volume);
+        volume.connect(ctx.destination);
+        
+        newOscillator.start()
+
+        
+        setOscillator(newOscillator);
     }
+    function onSlidingComplete(){
+        console.log("sliding complete")
+        oscillator.stop();
+        }
+
+    
 
     return (
         <View><Slider
             style={{ width: 300, height: 100, transform: [{ rotate: '-90deg' }], left: 50, top: 300 }}
-            minimumValue={1000}
-            maximumValue={4000}
+            minimumValue={450}
+            maximumValue={1000}
             minimumTrackTintColor="#8141e9f5"
             maximumTrackTintColor="#4c1f66ff"
             onValueChange={onValueChange}
             onSlidingStart={onSlidingStart}
-        /></View>
+            onSlidingComplete={onSlidingComplete}
+            trackHeight={50}
+            thumbSize={50}
+            step={1}
+            thumbTintColor='#faffe4f5'
+            //trackStyle={{loadStyles.Stem}}
+        />
+        </View>
+        
 
         /*<View styles={loadStyles.Head}>
     </View>*/)
