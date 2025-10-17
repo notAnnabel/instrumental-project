@@ -1,5 +1,5 @@
+import HeadClosed from '@/otamatone-closed.png';
 import Slider from '@react-native-community/slider';
-import HeadClosed from 'assets\images\otamatone-closed.png';
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { AudioContext, OscillatorNode } from 'react-native-audio-api';
