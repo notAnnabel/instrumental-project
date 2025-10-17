@@ -23,11 +23,15 @@ In the output, you'll find options to open the app in a
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 ## folder structure
-- [Tabs] contains layout (tabs), otomatone + piano (styling) 
-- [Assets] contains images
-- [Components] contains piano keys and otamatone parts
-- [Helpers -> Piano notes]
-- [Hooks] contains useOrientation
+- **Tabs** contains layout (tabs), otomatone + piano (styling) 
+- **Assets** contains images
+- **Components** contains piano keys and otamatone parts
+- **Helpers** -> Piano notes
+- **Hooks** contains useOrientation
+
+## syntax
+lowercase for constants, camelcase for functions
+lowercase for tab name files, PascalCase for each word for components
 
 
 ## note 

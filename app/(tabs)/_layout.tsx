@@ -14,8 +14,8 @@ export default function TabLayout(){
             <MaterialCommunityIcons name="piano" size={24} color={color} />}}></Tabs.Screen>
 
                  <Tabs.Screen
-            name="drums"
-            options={{title: "Drums", headerShown: false, tabBarIcon: ({color}) => <FontAwesome6 name="drum" size={24} color={color} />}}>
+            name="otamatone"
+            options={{title: "Otamatone", headerShown: false, tabBarIcon: ({color}) => <FontAwesome6 name="drum" size={24} color={color} />}}>
                 
             </Tabs.Screen>
 

@@ -1,4 +1,5 @@
 import Slider from '@react-native-community/slider';
+import HeadClosed from 'assets\images\otamatone-closed.png';
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { AudioContext, OscillatorNode } from 'react-native-audio-api';
@@ -13,12 +14,10 @@ export default function Stem() {
 
     function onValueChange(Value: number) {
         oscillator.frequency.value = Value;
-        console.log(Value);
+
     }
 
     function onSlidingStart(){
-        console.log("sliding")
-
         const newOscillator = ctx.createOscillator();
         
         newOscillator.type = 'triangle'; // sine wave - other options: square, sawtooth, triangle
@@ -40,7 +39,6 @@ export default function Stem() {
         setOscillator(newOscillator);
     }
     function onSlidingComplete(){
-        console.log("sliding complete")
         oscillator.stop();
         }
 
@@ -62,6 +60,7 @@ export default function Stem() {
             thumbTintColor='#faffe4f5'
             //trackStyle={{loadStyles.Stem}}
         />
+        <img src={HeadClosed}></img>
         </View>
         
 
