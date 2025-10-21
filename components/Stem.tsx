@@ -1,8 +1,9 @@
-import HeadClosed from '@/otamatone-closed.png';
 import Slider from '@react-native-community/slider';
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { AudioContext, OscillatorNode } from 'react-native-audio-api';
+
+// const headClosed = require('../assets/images/otamatone-closed.png');
 
 export default function Stem() {
 
@@ -60,7 +61,7 @@ export default function Stem() {
             thumbTintColor='#faffe4f5'
             //trackStyle={{loadStyles.Stem}}
         />
-        <img src={HeadClosed}></img>
+        <img src={'../assets/images/otamatone-closed.png'}></img>
         </View>
         
 

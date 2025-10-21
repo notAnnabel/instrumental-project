@@ -5,7 +5,7 @@ import { StyleSheet, Text } from "react-native";
 import useOrientation from "@/hooks/useOrientation";
 
 
-export default function Index() {
+export default function PianoPage() {
   const screenOrientation  = useOrientation(); // hook stored in a variable
   
   if (screenOrientation===Orientation.LANDSCAPE_LEFT) return <Piano/>;

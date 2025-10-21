@@ -5,7 +5,7 @@ import { StyleSheet, Text } from "react-native";
 import Otamatone from "@/components/Otamatone";
 
 
-export default function Index() {
+export default function OtamatonePage() {
 
   const screenOrientation  = useOrientation(); // hook stored in a variable
     
