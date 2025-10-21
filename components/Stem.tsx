@@ -1,7 +1,7 @@
 import Slider from '@react-native-community/slider';
 import React, { useState } from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { AudioContext } from 'react-native-audio-api';
+import { AudioContext, OscillatorNode } from 'react-native-audio-api';
 
 const headClosed = require('../assets/images/otamatone-closed.png');
 
