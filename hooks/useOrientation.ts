@@ -11,7 +11,6 @@ export default function useOrientation(){
 
   // call load orientation function
   useEffect(() => {
-    console.log("hello world")
    loadOrientation() // must be in useEffect as should only be added when fully rendered layout
     addOrientationChangeListener(loadOrientation) // everytime orientation changes it'll reload!!!
   });
