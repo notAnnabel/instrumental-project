@@ -1,8 +1,8 @@
-import Piano from "@/components/Piano";
+import useOrientation from "@/hooks/useOrientation";
 import { Orientation } from "expo-screen-orientation";
 import { StyleSheet, Text } from "react-native";
 
-import useOrientation from "@/hooks/useOrientation";
+import Piano from "@/components/Piano";
 
 
 export default function PianoPage() {

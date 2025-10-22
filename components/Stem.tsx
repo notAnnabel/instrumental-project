@@ -1,5 +1,5 @@
 import Slider from '@react-native-community/slider';
-import React, { useState } from "react";
+import { useState } from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { AudioContext, OscillatorNode } from 'react-native-audio-api';
 

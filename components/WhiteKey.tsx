@@ -1,5 +1,5 @@
 import { AudioSource, useAudioPlayer } from 'expo-audio';
-import React, { useState } from "react";
+import { useState } from "react";
 import { Pressable, StyleSheet, View } from "react-native";
 
 const audioSource = require('../helpers/notes/piano/B4.mp3')

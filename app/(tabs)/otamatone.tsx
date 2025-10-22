@@ -11,7 +11,7 @@ export default function OtamatonePage() {
     
     if (screenOrientation===Orientation.PORTRAIT_DOWN) return <Otamatone/>;
     if (screenOrientation===Orientation.PORTRAIT_UP) return <Otamatone/>;
-    else return <Text> Rotate device to landscape. orientation : {screenOrientation} </Text> //text overwrites piano
+    else return <Text> Rotate device to landscape. orientation : {screenOrientation} </Text> //text overwrites otamatone
     
   }
 

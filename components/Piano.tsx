@@ -1,4 +1,4 @@
-import WhiteKey from "@/components/WhiteKey"; // go from root to hook :3
+import WhiteKey from "@/components/WhiteKey"; // go from root to hook 
 import { loadAudioPlayers } from "@/helpers/audio";
 import { StyleSheet, View } from "react-native";
 import BlackKey from "./BlackKey";
@@ -32,9 +32,6 @@ export default function Piano() {
 
 
       </View>
-      {/* <Text style={styles.text}> piano with no black keys and can't be pressed...</Text> */}
-      {/* <Text style={styles.text}> I want a refund!!!!!</Text> */}
-      {/* change to vertical if needed*/}
     </View>
   );
 }
