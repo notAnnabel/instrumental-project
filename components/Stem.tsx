@@ -60,14 +60,13 @@ export default function Stem() {
             thumbSize={50}
             step={1}
             thumbTintColor='#fbff00f5'
-            //trackStyle={{loadStyles.Stem}}
         />
         <Image style={loadStyles().Head} source={require('../assets/images/otamatone-closed.png')}></Image> 
         </View>
         
 
-        /*<View styles={loadStyles.Head}>
-    </View>*/)
+        
+    )
 
 }
 

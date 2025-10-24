@@ -6,14 +6,14 @@ const audioSource = require('../helpers/notes/piano/B4.mp3')
 
 interface WhiteKeyProps{
   audio: AudioSource; 
-} // property siybd
+} 
 
 export default function WhiteKey({audio}: WhiteKeyProps) { // whitekey expected audio object
   const player = useAudioPlayer(audio);
   const [backgroundColor, setBackgroundColor] = useState("white");
+  // default background color for white key
 
-  function onPress(){
-   console.log("a white key has been pressed");
+  async function onPress(){
    player.seekTo(0) // resets time to 0 for audio player
    player.play()
    setBackgroundColor("lightgrey"); // change color on press
