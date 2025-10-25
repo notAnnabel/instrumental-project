@@ -15,7 +15,6 @@ export default function Stem() {
 
     function onValueChange(Value: number) {
         oscillator.frequency.value = Value;
-
     }
 
     function onSlidingStart(){

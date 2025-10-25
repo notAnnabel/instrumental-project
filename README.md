@@ -34,6 +34,7 @@ lowercase for constants, camelcase for functions
 lowercase for tab name files, PascalCase for each word for components
 
 
-## note 
-npx expo install react-native-audio-api <3
+## Otamatone slider note 
+The Otamatone slider needs to be selected before being dragged. On the web version, it needs
+to be dragged horizontally rather than vertically. This issue doesn't exist on the android verison.
 
