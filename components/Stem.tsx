@@ -92,6 +92,7 @@ function loadStyles() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "#74a812ff",
   }
     })
 };
