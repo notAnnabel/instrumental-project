@@ -58,7 +58,7 @@ export default function Stem() {
             trackHeight={50}
             thumbSize={50}
             step={1}
-            thumbTintColor='#fbff00f5'
+            thumbTintColor='#ddac24f5'
         />
         <Image style={loadStyles().Head} source={require('../assets/images/otamatone-closed.png')}></Image> 
         </View>
@@ -92,7 +92,7 @@ function loadStyles() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "#74a812ff",
+          //backgroundColor: "#74a812ff",
   }
     })
 };
